@@ -4,7 +4,7 @@ import pytest
 request = Request.Request()
 assertion = Assert.Assertions()
 idsList=[]
-excel_list = read_excel.read_excel_list('../document/youhui.xlsx')
+excel_list = read_excel.read_excel_list('./document/youhui.xlsx')
 length = len(excel_list)
 for i in range(length):
     idsList.append(excel_list[i].pop())
