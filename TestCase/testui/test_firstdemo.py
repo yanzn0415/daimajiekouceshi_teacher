@@ -186,12 +186,14 @@ class TestUI:
         time.sleep(10)
         iframe = driver.find_element_by_xpath("//iframe[@id='iframepage']")
         driver.switch_to.frame(iframe)
+
         driver.find_element_by_xpath("//button[contains(text(),'查询')]").click()
         time.sleep(10)
         # driver.switch_to.parent_frame()
         driver.switch_to.default_content()
         driver.find_element_by_xpath("//a[contains(text(),'作业检查')]").click()
         time.sleep(3)
+
         driver.get_screenshot_as_file("d:\\1.png")
         time.sleep(3)
         self.quit(driver)
